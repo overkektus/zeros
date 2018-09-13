@@ -1,8 +1,11 @@
 module.exports = function getZerosCount(number) {
-  let res = 0;
-  while(number > 5) {
-    number = Math.floor(number/5);
-    res+=number
-  }
-  return res;
+  let zeros = 0;
+  for (let i = 1; i <= number; i++) {
+    num = i
+    while (num % 5 === 0){ 
+      num /= 5;
+      zeros++;
+    }
+}
+  return zeros;
 }
